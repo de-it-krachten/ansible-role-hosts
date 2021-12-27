@@ -1,0 +1,18 @@
+---
+
+- name: Fix for /etc/hosts in docker container
+  shell: |
+    if mount | grep -q /etc/hosts
+    then
+      cp /etc/hosts /tmp/hosts
+      umount /etc/hosts
+      cp /tmp/hosts /etc/hosts
+    fi
+   changed_when: false
+   when: ansible_virtualization_type in [ 'docker', 'container', 'containerd' ]
+
+- name: Register all nodes in /etc/hosts
+  lineinfile:
+    line: "{{ hostvars[item]['ansible_default_ipv4']['address'] }} {{ item }}"
+    path: /etc/hosts
+  loop: "{{ groups['all'] }}"
