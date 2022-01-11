@@ -1,0 +1,4 @@
+---
+
+# Adapter to retrieve IP from
+hosts_adapter: default
