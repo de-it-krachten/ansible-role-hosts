@@ -13,6 +13,8 @@ Supported platforms
 
 - CentOS 7
 - CentOS 8
+- RockyLinux 8
+- AlmaLinux 8
 - Debian 10 (Buster)
 - Debian 11 (Bullseye)
 - Ubuntu 18.04 LTS
@@ -32,13 +34,13 @@ Example Playbook
 ----------------
 
 <pre><code>
-- name: Converge
+- name: sample playbook for role 'hosts'
   hosts: all
   vars:
   tasks:
-    - name: Include role 'ansible-role-hosts'
+    - name: Include role 'hosts'
       include_role:
-        name: ansible-role-hosts
+        name: hosts
 
     - name: Get /etc/hosts
       command: cat /etc/hosts
