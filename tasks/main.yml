@@ -14,16 +14,21 @@
   changed_when: false
   when: ansible_virtualization_type in [ 'docker', 'container', 'containerd' ]
 
-- name: Register all nodes in /etc/hosts (default nic)
-  lineinfile:
-    line: "{{ hostvars[item]['ansible_default_ipv4']['address'] }} {{ item }}"
-    path: /etc/hosts
+- name: Create list of addresses to register (default nic)
+  set_fact:
+    hosts_list: "{{ (hosts_list|default([])) + [ { 'name': item, 'ip': hostvars[item]['ansible_default_ipv4']['address'] } ] }}"
   loop: "{{ groups['all'] }}"
   when: hosts_adapter == 'default'
 
-- name: Register all nodes in /etc/hosts (non-default nic)
-  lineinfile:
-    line: "{{ hostvars[item]['ansible_'+hosts_adapter]['ipv4']['address'] }} {{ item }}"
-    path: /etc/hosts
+- name: Create list of addresses to register (custom nic)
+  set_fact:
+    hosts_list: "{{ (hosts_list|default([])) + [ { 'name': item, 'ip': hostvars[item]['ansible_'+hosts_adapter]['ipv4']['address'] } ] }}"
   loop: "{{ groups['all'] }}"
   when: hosts_adapter != 'default'
+
+- name: Register all nodes in /etc/hosts
+  lineinfile:
+    regexp: "{{ item.ip }}\\s+{{ item.name }}"
+    line: "{{ item.ip }} {{ item.name }}"
+    path: /etc/hosts
+  loop: "{{ hosts_list }}"
