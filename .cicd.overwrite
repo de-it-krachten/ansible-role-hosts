@@ -1,8 +1,9 @@
+---
+
 generic:
   role_description: |
     Register all hosts within the inventory in /etc/hosts
-ci_templates:
-  molecule.yml:
-    force: false
-  converge.yml:
-    force: false
+
+molecule:
+  converge:
+    post: converge-post.yml
