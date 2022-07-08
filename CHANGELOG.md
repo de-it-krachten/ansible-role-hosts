@@ -1,3 +1,11 @@
+# [1.1.0](https://github.com/de-it-krachten/ansible-role-hosts/compare/v1.0.1...v1.1.0) (2022-07-08)
+
+
+### Features
+
+* add support for custom DNS server ([c14ca11](https://github.com/de-it-krachten/ansible-role-hosts/commit/c14ca111eb1f917c7a67ad55c6d8fd0749f8a9f5))
+* Add support for several newer platforms ([04a11ff](https://github.com/de-it-krachten/ansible-role-hosts/commit/04a11ff5537204680793499e3bfe24e737f6f851))
+
 ## [1.0.1](https://github.com/de-it-krachten/ansible-role-hosts/compare/v1.0.0...v1.0.1) (2022-02-03)
 
 
