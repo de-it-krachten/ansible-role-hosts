@@ -2,3 +2,10 @@
 
 # Adapter to retrieve IP from
 hosts_adapter: default
+
+# Type of name resolving to configure
+# hosts = /etc/hosts, dns = /etc/resolv.conf or both
+hosts_mode: hosts
+
+# list of name servers
+hosts_dns_servers: []

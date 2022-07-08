@@ -3,38 +3,51 @@
 
 # ansible-role-hosts
 
-Register all hosts within the inventory in /etc/hosts
+Configures /etc/hosts with custom records and/or configures the system to use custom DNS servers
 
 
-Platforms
---------------
+## Platforms
 
 Supported platforms
 
 - Red Hat Enterprise Linux 7<sup>1</sup>
 - Red Hat Enterprise Linux 8<sup>1</sup>
+- Red Hat Enterprise Linux 9<sup>1</sup>
 - CentOS 7
 - RockyLinux 8
-- AlmaLinux 8<sup>1</sup>
+- OracleLinux 8
+- AlmaLinux 8
+- AlmaLinux 9
 - Debian 10 (Buster)
 - Debian 11 (Bullseye)
 - Ubuntu 18.04 LTS
 - Ubuntu 20.04 LTS
+- Ubuntu 22.04 LTS
+- Fedora 35
+- Fedora 36
+- Alpine 3
 
 Note:
 <sup>1</sup> : no automated testing is performed on these platforms
 
-Role Variables
---------------
+## Role Variables
+### defaults/main.yml
 <pre><code>
 # Adapter to retrieve IP from
 hosts_adapter: default
+
+# Type of name resolving to configure
+# hosts = /etc/hosts, dns = /etc/resolv.conf or both
+hosts_mode: hosts
+
+# list of name servers
+hosts_dns_servers: []
 </pre></code>
 
 
-Example Playbook
-----------------
 
+## Example Playbook
+### molecule/default/converge.yml
 <pre><code>
 - name: sample playbook for role 'hosts'
   hosts: all
@@ -43,13 +56,4 @@ Example Playbook
     - name: Include role 'hosts'
       include_role:
         name: hosts
-
-    - name: Get /etc/hosts
-      command: cat /etc/hosts
-      changed_when: false
-      register: _hosts
-
-    - name: Show /etc/hosts
-      debug:
-        var: _hosts.stdout_lines
 </pre></code>

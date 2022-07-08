@@ -1,0 +1,28 @@
+---
+
+- name: Assert
+  assert:
+    that:
+      - hosts_dns_servers is defined
+      - hosts_dns_servers|length > 0
+
+- name: Fix for /etc/hosts in docker container
+  shell: |
+    set -o pipefail
+    if mount | grep -q /etc/resolv.conf
+    then
+      umount /etc/resolv.conf
+    fi
+  args:
+    executable: /bin/bash
+  changed_when: false
+  when: ansible_virtualization_type in [ 'docker', 'container', 'containerd' ]
+
+- name: Point to custom name server
+  copy:
+    content: |
+      {% for dns_server_ip in hosts_dns_servers %}
+      nameserver {{ dns_server_ip }}
+      {% endfor %}
+    dest: /etc/resolv.conf
+    mode: "0644"

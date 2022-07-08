@@ -1,8 +1,10 @@
+---
+
 generic:
   role_description: |
-    Register all hosts within the inventory in /etc/hosts
-ci_templates:
-  molecule.yml:
-    force: false
-  converge.yml:
-    force: false
+    Configures /etc/hosts with custom records and/or configures the system to use custom DNS servers
+
+platforms:
+  alpine3:
+    ci: true
+    supported: true
