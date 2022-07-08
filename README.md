@@ -3,7 +3,7 @@
 
 # ansible-role-hosts
 
-Register all hosts within the inventory in /etc/hosts
+Configures /etc/hosts with custom records and/or configures the system to use custom DNS servers
 
 
 ## Platforms
@@ -25,6 +25,7 @@ Supported platforms
 - Ubuntu 22.04 LTS
 - Fedora 35
 - Fedora 36
+- Alpine 3
 
 Note:
 <sup>1</sup> : no automated testing is performed on these platforms
@@ -34,6 +35,13 @@ Note:
 <pre><code>
 # Adapter to retrieve IP from
 hosts_adapter: default
+
+# Type of name resolving to configure
+# hosts = /etc/hosts, dns = /etc/resolv.conf or both
+hosts_mode: hosts
+
+# list of name servers
+hosts_dns_servers: []
 </pre></code>
 
 
@@ -48,6 +56,4 @@ hosts_adapter: default
     - name: Include role 'hosts'
       include_role:
         name: hosts
-
-- import_playbook: converge-post.yml
 </pre></code>

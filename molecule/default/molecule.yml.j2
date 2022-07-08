@@ -10,7 +10,7 @@ lint: |
   ansible-lint
 platforms:
 {% for platform in MOLECULE_DISTROS %}
-  - name: hosts-{{ platform.name }}
+  - name: hosts-{{ platform.name }}-node1
     image: "{{ platform.image }}"
     rhsm: {{ platform.rhsm | default(False) }}
     command: ${MOLECULE_DOCKER_COMMAND:-""}
@@ -29,9 +29,8 @@ provisioner:
   playbooks:
     converge: ${MOLECULE_PLAYBOOK:-converge.yml}
   inventory:
-    host_vars:
-      hosts-rockylinux8:
-        ansible_python_interpreter: /usr/libexec/platform-python
+    group_vars: {}
+    host_vars: {}
 scenario:
   name: default
 verifier:

@@ -2,8 +2,9 @@
 
 generic:
   role_description: |
-    Register all hosts within the inventory in /etc/hosts
+    Configures /etc/hosts with custom records and/or configures the system to use custom DNS servers
 
-molecule:
-  converge:
-    post: converge-post.yml
+platforms:
+  alpine3:
+    ci: true
+    supported: true
