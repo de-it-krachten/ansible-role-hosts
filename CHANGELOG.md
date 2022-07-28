@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/de-it-krachten/ansible-role-hosts/compare/v1.1.0...v1.2.0) (2022-07-28)
+
+
+### Features
+
+* Implement ansible-lint v6 support ([5d197ca](https://github.com/de-it-krachten/ansible-role-hosts/commit/5d197ca8b0c6d8326a5295e066b3828dbdd4f999))
+
 # [1.1.0](https://github.com/de-it-krachten/ansible-role-hosts/compare/v1.0.1...v1.1.0) (2022-07-08)
 
 
