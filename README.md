@@ -6,6 +6,15 @@
 Configures /etc/hosts with custom records and/or configures the system to use custom DNS servers
 
 
+
+## Dependencies
+
+#### Roles
+None
+
+#### Collections
+- community.general
+
 ## Platforms
 
 Supported platforms
@@ -47,6 +56,7 @@ hosts_dns_servers: []
 
 
 
+
 ## Example Playbook
 ### molecule/default/converge.yml
 <pre><code>
@@ -55,6 +65,6 @@ hosts_dns_servers: []
   become: "{{ molecule['converge']['become'] | default('yes') }}"
   tasks:
     - name: Include role 'hosts'
-      include_role:
+      ansible.builtin.include_role:
         name: hosts
 </pre></code>
