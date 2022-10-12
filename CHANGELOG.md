@@ -1,3 +1,11 @@
+# [1.3.0](https://github.com/de-it-krachten/ansible-role-hosts/compare/v1.2.0...v1.3.0) (2022-10-12)
+
+
+### Features
+
+* Move to FQCN ([501248e](https://github.com/de-it-krachten/ansible-role-hosts/commit/501248e650363747fc7da2f18e6e1563f0b7f4f6))
+* Update CI to latest standards ([208816c](https://github.com/de-it-krachten/ansible-role-hosts/commit/208816ce25a76a532e9ce81190ca6a42c803fc03))
+
 # [1.2.0](https://github.com/de-it-krachten/ansible-role-hosts/compare/v1.1.0...v1.2.0) (2022-07-28)
 
 
