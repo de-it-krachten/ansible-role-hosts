@@ -2,8 +2,8 @@
 
 - name: Include hosts.yml
   ansible.builtin.include_tasks: hosts.yml
-  when: hosts_mode is search('^(hosts | both)')
+  when: hosts_mode is search('^(hosts|both)')
 
 - name: Include dns.yml
   ansible.builtin.include_tasks: dns.yml
-  when: hosts_mode is search('^(dns | both)')
+  when: hosts_mode is search('^(dns|both)')
