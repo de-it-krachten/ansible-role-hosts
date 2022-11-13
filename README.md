@@ -62,7 +62,7 @@ hosts_dns_servers: []
 <pre><code>
 - name: sample playbook for role 'hosts'
   hosts: all
-  become: "{{ molecule['converge']['become'] | default('yes') }}"
+  become: "yes"
   tasks:
     - name: Include role 'hosts'
       ansible.builtin.include_role:
