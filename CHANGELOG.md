@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/de-it-krachten/ansible-role-hosts/compare/v1.3.1...v1.3.2) (2022-11-27)
+
+
+### Bug Fixes
+
+* Remove mistake from regexp ([057b988](https://github.com/de-it-krachten/ansible-role-hosts/commit/057b9887f7730178bea94dc54fc421f1925a87d4))
+
 ## [1.3.1](https://github.com/de-it-krachten/ansible-role-hosts/compare/v1.3.0...v1.3.1) (2022-11-13)
 
 
