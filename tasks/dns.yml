@@ -9,7 +9,9 @@
 - name: Fix for /etc/hosts in docker container
   ansible.builtin.shell: |
     set -o pipefail
-    if mount | grep -q /etc/resolv.conf
+    mount=$(mount | grep -q /etc/resolv.conf ; echo $?)
+    df=$(df | grep -q /etc/resolv.conf ; echo $?)
+    if [[ $mount -eq 0 || $df -eq 0 ]]
     then
       umount /etc/resolv.conf
     fi
