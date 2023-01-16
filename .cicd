@@ -2,6 +2,7 @@
 
 # Generic
 generic:
+  org: deitkrachten
   role: ansible-role-hosts
   role_short: hosts
   role_description: |
@@ -54,6 +55,8 @@ platforms:
     galaxy:
       name: EL
       version: 7
+    github:
+      runs_on: "ubuntu-20.04"
     molecule:
       docker:
         image: "geerlingguy/docker-centos7-ansible:latest"
@@ -146,6 +149,18 @@ platforms:
         image: "dropveter/oraclelinux8-ansible"
       vagrant:
         box: "generic/oracle8"
+  oraclelinux9:
+    name: OracleLinux 9
+    ci: true
+    supported: true
+    galaxy:
+      name: EL
+      version: 9
+    molecule:
+      docker:
+        image: "dropveter/oraclelinux9-ansible"
+      vagrant:
+        box: "generic/oracle9"
   almalinux8:
     name: AlmaLinux 8
     ci: true
@@ -356,8 +371,12 @@ github:
       ansible_lint: "ansible-lint>6,<7"
     - name: ansible_2.13
       ansible: "ansible>6,<7"
-      ansible_core: "ansible-core<2.13,<2.14"
+      ansible_core: "ansible-core>2.13,<2.14"
       ansible_lint: "ansible-lint>6,<7"
+    - name: ansible_2.14
+      ansible: "ansible>6,<7"
+      ansible_core: "ansible-core>2.14,<2.15"
+      ansible_lint: "ansible-lint"
 
 # Gitlab
 gitlab:
@@ -377,15 +396,15 @@ molecule:
       systemctl_alternative: false
   requirements:
     roles:
-      - epel
-      - facts
-      - firewall
-      - firewalld
-      - iptables
-      - reboot
-      - showinfo
-      - ufw
-      - unbound
+      - deitkrachten.epel
+      - deitkrachten.facts
+      - deitkrachten.firewall
+      - deitkrachten.firewalld
+      - deitkrachten.iptables
+      - deitkrachten.reboot
+      - deitkrachten.showinfo
+      - deitkrachten.ufw
+      - deitkrachten.unbound
   nodes:
     - name: node1
       groups: []
