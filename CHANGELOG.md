@@ -1,3 +1,15 @@
+# [1.4.0](https://github.com/de-it-krachten/ansible-role-hosts/compare/v1.3.2...v1.4.0) (2023-05-06)
+
+
+### Bug Fixes
+
+* Fix Alpine support as mount command does not show volumes ([724abc4](https://github.com/de-it-krachten/ansible-role-hosts/commit/724abc41625909b9a2ac665cef5e0af0f0142fe8))
+
+
+### Features
+
+* Update CI/README/Platforms ([da93400](https://github.com/de-it-krachten/ansible-role-hosts/commit/da93400564ff88b0b1f708f8d6d8d251f8640574))
+
 ## [1.3.2](https://github.com/de-it-krachten/ansible-role-hosts/compare/v1.3.1...v1.3.2) (2022-11-27)
 
 
