@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/de-it-krachten/ansible-role-hosts/compare/v1.4.0...v1.5.0) (2023-08-16)
+
+
+### Features
+
+* Update supported platforms & CI ([b8827d8](https://github.com/de-it-krachten/ansible-role-hosts/commit/b8827d82bbe1c49a5ff7c49d546cd7b8a5ac3617))
+
 # [1.4.0](https://github.com/de-it-krachten/ansible-role-hosts/compare/v1.3.2...v1.4.0) (2023-05-06)
 
 
