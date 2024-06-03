@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/de-it-krachten/ansible-role-hosts/compare/v1.5.0...v1.6.0) (2024-06-03)
+
+
+### Features
+
+* Add support for Ubuntu 24.04 LTS + Fedora 40 ([42d5d15](https://github.com/de-it-krachten/ansible-role-hosts/commit/42d5d1562671257b77211e05ac9cdba800c609f4))
+
 # [1.5.0](https://github.com/de-it-krachten/ansible-role-hosts/compare/v1.4.0...v1.5.0) (2023-08-16)
 
 
