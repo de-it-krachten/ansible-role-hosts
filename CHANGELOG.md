@@ -1,3 +1,14 @@
+# [1.8.0](https://github.com/de-it-krachten/ansible-role-hosts/compare/v1.7.0...v1.8.0) (2025-08-06)
+
+
+### Features
+
+* Add support for AlmaLinux 10 ([88d0b5e](https://github.com/de-it-krachten/ansible-role-hosts/commit/88d0b5e57a3b90b104f3b2cabd71d6e84a290bcd))
+* Add support for Debian 13 (Trixie) ([f9226a3](https://github.com/de-it-krachten/ansible-role-hosts/commit/f9226a399cc2b5131107a1924de3c1d1f282dafe))
+* Add support for OracleLinux 10 ([8124c17](https://github.com/de-it-krachten/ansible-role-hosts/commit/8124c17e021b69be99e48052217c06e09b9cf830))
+* Add support for Red Hat Enterprise Linux 10 ([68b469a](https://github.com/de-it-krachten/ansible-role-hosts/commit/68b469a49e05f9c62a78fc615a7cf60eecf4100a))
+* Add support for RockyLinux 10 ([7e9d305](https://github.com/de-it-krachten/ansible-role-hosts/commit/7e9d30508c4335cb715d0f9c0064ca4d48127ffd))
+
 # [1.7.0](https://github.com/de-it-krachten/ansible-role-hosts/compare/v1.6.0...v1.7.0) (2024-12-29)
 
 
