@@ -4,7 +4,24 @@ generic:
   role_description: |
     Configures /etc/hosts with custom records and/or configures the system to use custom DNS servers
 
+# Supported platforms
 platforms:
-  alpine3:
-    ci: true
+  sles15:
     supported: true
+    ci: false
+  sles16:
+    supported: true
+    ci: false
+  opensuse15:
+    supported: true
+    ci: true
+  opensuse16:
+    supported: true
+    ci: true
+  ubuntu2004:
+    supported: true
+    ci: true
+  alpine3:
+    supported: true
+    ci: true
+
