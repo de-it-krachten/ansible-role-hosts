@@ -1,3 +1,13 @@
+# [1.9.0](https://github.com/de-it-krachten/ansible-role-hosts/compare/v1.8.0...v1.9.0) (2026-03-15)
+
+
+### Features
+
+* Added support for Fedora 43 ([5800762](https://github.com/de-it-krachten/ansible-role-hosts/commit/5800762c914768418b78d0b137682c1716603daf))
+* Drop support for Fedora 41 ([8762a88](https://github.com/de-it-krachten/ansible-role-hosts/commit/8762a88270580fe92070a492ee05c536aa833421))
+* Drop support for openSUSE Leap 15 ([a6dc290](https://github.com/de-it-krachten/ansible-role-hosts/commit/a6dc290a7bd45139d93df98d31f55d6dec220152))
+* Drop support for SUSE Linux Enterprise 15 ([34743a8](https://github.com/de-it-krachten/ansible-role-hosts/commit/34743a8a188d1e1e5a16177d1faeaf328c11cb5e))
+
 # [1.8.0](https://github.com/de-it-krachten/ansible-role-hosts/compare/v1.7.0...v1.8.0) (2025-08-06)
 
 
