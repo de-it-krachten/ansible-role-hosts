@@ -1,3 +1,10 @@
+## [1.11.1](https://github.com/de-it-krachten/ansible-role-hosts/compare/v1.11.0...v1.11.1) (2026-10-11)
+
+
+### Bug Fixes
+
+* Create /etc/hosts if not existing ([b1f6432](https://github.com/de-it-krachten/ansible-role-hosts/commit/b1f6432a0c2c298d1accc90c172fb47e1033039e))
+
 # [1.11.0](https://github.com/de-it-krachten/ansible-role-hosts/compare/v1.10.0...v1.11.0) (2026-10-10)
 
 
