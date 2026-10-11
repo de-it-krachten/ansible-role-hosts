@@ -12,7 +12,12 @@
       ansible.builtin.set_fact:
         molecule_driver: "{{ lookup('env', 'MOLECULE_DRIVER_NAME') }}"
 
-    - name: Redefine virtualization type
+    - name: Redefine virtualization type (docker)
       ansible.builtin.set_fact:
         __virtualization_type: 'docker'
       when: molecule_driver | length > 0 and molecule_driver == 'docker'
+
+    - name: Redefine virtualization type (podman)
+      ansible.builtin.set_fact:
+        __virtualization_type: 'podman'
+      when: molecule_driver | length > 0 and molecule_driver == 'podman'
