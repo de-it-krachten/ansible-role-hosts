@@ -6,7 +6,7 @@
       - hosts_dns_servers is defined
       - hosts_dns_servers | length > 0
 
-- name: Fix for /etc/hosts in docker container
+- name: Fix for /etc/resolv.conf in docker container
   ansible.builtin.shell: |
     set -o pipefail
     mount=$(mount | grep -q /etc/resolv.conf ; echo $?)
